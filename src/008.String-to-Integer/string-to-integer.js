@@ -6,10 +6,10 @@
 const myAtoi = function (str) {
     var num = 0
 
-    // 去符號 + 空白
-    var sign = Math.sign(str.replace(/ +/i, ''))
-    // 去符號 + 空白 + 反轉字串
-    var newStr = str.replace(/[ -]+/i, '').split('').reverse().join('')
+    // 去符號 + 空白 + a-z
+    var sign = Math.sign(str.replace(/[ a-z]+/i, ''))
+    // 去符號 + 空白 + a-z + 反轉字串
+    var newStr = str.replace(/[- a-z]+/i, '').split('').reverse().join('')
 
     for (var i = 0; i < newStr.length; i++) {
         num += newStr[i] * Math.pow(10, i)
