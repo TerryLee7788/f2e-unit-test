@@ -6,6 +6,9 @@
 const myAtoi = function (str) {
     var num = 0
 
+    // 第一個字是英文的話 return 0
+    if (/[a-zA-Z]/.test(str[0])) return 0
+
     // 去符號 + 空白 + a-z
     var sign = Math.sign(str.replace(/[ a-z]+/i, ''))
     // 去符號 + 空白 + a-z + 反轉字串
