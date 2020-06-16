@@ -29,7 +29,7 @@ describe("String to Integer (atoi)", () => {
     expect(myAtoi(input)).toEqual(expected);
   });
 
-  test("Input:words and 987, target=4193", () => {
+  test("Input:words and 987, target=0", () => {
     //arragne
     const input = "words and 987"
     const expected = 0
